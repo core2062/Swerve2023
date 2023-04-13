@@ -1,0 +1,193 @@
+See file:///C:/Users/ahunt/CORE2062%20Projects/TestSwerveProject/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramDebugExecutableFrcUserProgramCpp.
+compiling SwerveModule.cpp failed.
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp: In member function 'frc::SwerveModuleState SwerveModule::GetState()':
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:41:51: error: 'class ctre::phoenix::motorcontrol::can::WPI_TalonFX' has no member named 'GetRate'
+   41 |   return {units::meters_per_second_t{m_driveMotor.GetRate()},
+      |                                                   ^~~~~~~
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:41:60: error: no matching function for call to 'units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > > >::unit_t(<brace-enclosed initializer list>)'
+   41 |   return {units::meters_per_second_t{m_driveMotor.GetRate()},
+      |                                                            ^
+In file included from C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/time.h:29,
+                 from C:\Users\ahunt\.gradle\caches\transforms-3\cfbd4a710e92d70b97599d4bd2635208\transformed\wpilibc-cpp-2023.4.2-headers/frc/Counter.h:10,
+                 from C:\Users\ahunt\.gradle\caches\transforms-3\cfbd4a710e92d70b97599d4bd2635208\transformed\wpilibc-cpp-2023.4.2-headers/frc/Encoder.h:14,
+                 from C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\include/subsystems/SwerveModule.h:9,
+                 from C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:5:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1991:34: note: candidate: 'template<class UnitsRhs, class Ty, template<class> class NlsRhs> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(const units::unit_t<UnitsRhs, Ty, NlsRhs>&) [with Ty = UnitsRhs; NlsRhs = Ty; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1991 |                 inline constexpr unit_t(const unit_t<UnitsRhs, Ty, NlsRhs>& rhs) noexcept :
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1991:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1979:34: note: candidate: 'template<class Rep, class Period, class> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(const std::chrono::duration<_Rep, _Period>&) [with Period = Rep; <template-parameter-2-3> = Period; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1979 |                 inline constexpr unit_t(const std::chrono::duration<Rep, Period>& value) noexcept :
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1979:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1968:34: note: candidate: 'template<class Ty, class> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(Ty) [with <template-parameter-2-2> = Ty; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1968 |                 inline constexpr unit_t(const Ty value) noexcept : nls(value)
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1968:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1957:43: note: candidate: 'template<class ... Args> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(T, const Args& ...) [with Args = {Args ...}; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1957 |                 inline explicit constexpr unit_t(const T value, const Args&... args) noexcept : nls(value, args...)
+      |                                           ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1957:43: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1946:27: note: candidate: 'constexpr units::unit_t<Units, T, NonLinearScale>::unit_t() [with Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1946 |                 constexpr unit_t() = default;
+      |                           ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1946:27: note:   candidate expects 0 arguments, 1 provided
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note: candidate: 'constexpr units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > > >::unit_t(const units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > > >&)'
+ 1925 |         class unit_t : public NonLinearScale<T>, units::detail::_unit_t
+      |               ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note:   conversion of argument 1 would be ill-formed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note: candidate: 'constexpr units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > > >::unit_t(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > > >&&)'
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note:   conversion of argument 1 would be ill-formed:
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:42:44: error: 'class ctre::phoenix::sensors::CANCoder' has no member named 'GetDistance'
+   42 |           units::radian_t{m_turningEncoder.GetDistance()}};
+      |                                            ^~~~~~~~~~~
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:42:57: error: no matching function for call to 'units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >::unit_t(<brace-enclosed initializer list>)'
+   42 |           units::radian_t{m_turningEncoder.GetDistance()}};
+      |                                                         ^
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1991:34: note: candidate: 'template<class UnitsRhs, class Ty, template<class> class NlsRhs> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(const units::unit_t<UnitsRhs, Ty, NlsRhs>&) [with Ty = UnitsRhs; NlsRhs = Ty; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1991 |                 inline constexpr unit_t(const unit_t<UnitsRhs, Ty, NlsRhs>& rhs) noexcept :
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1991:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1979:34: note: candidate: 'template<class Rep, class Period, class> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(const std::chrono::duration<_Rep, _Period>&) [with Period = Rep; <template-parameter-2-3> = Period; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1979 |                 inline constexpr unit_t(const std::chrono::duration<Rep, Period>& value) noexcept :
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1979:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1968:34: note: candidate: 'template<class Ty, class> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(Ty) [with <template-parameter-2-2> = Ty; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1968 |                 inline constexpr unit_t(const Ty value) noexcept : nls(value)
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1968:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1957:43: note: candidate: 'template<class ... Args> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(T, const Args& ...) [with Args = {Args ...}; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1957 |                 inline explicit constexpr unit_t(const T value, const Args&... args) noexcept : nls(value, args...)
+      |                                           ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1957:43: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1946:27: note: candidate: 'constexpr units::unit_t<Units, T, NonLinearScale>::unit_t() [with Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1946 |                 constexpr unit_t() = default;
+      |                           ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1946:27: note:   candidate expects 0 arguments, 1 provided
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note: candidate: 'constexpr units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >::unit_t(const units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >&)'
+ 1925 |         class unit_t : public NonLinearScale<T>, units::detail::_unit_t
+      |               ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note:   conversion of argument 1 would be ill-formed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note: candidate: 'constexpr units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >::unit_t(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >&&)'
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note:   conversion of argument 1 would be ill-formed:
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:42:58: error: could not convert '{<expression error>, <expression error>}' from '<brace-enclosed initializer list>' to 'frc::SwerveModuleState'
+   42 |           units::radian_t{m_turningEncoder.GetDistance()}};
+      |                                                          ^
+      |                                                          |
+      |                                                          <brace-enclosed initializer list>
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp: In member function 'frc::SwerveModulePosition SwerveModule::GetPosition()':
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:47:44: error: 'class ctre::phoenix::sensors::CANCoder' has no member named 'GetDistance'
+   47 |           units::radian_t{m_turningEncoder.GetDistance()}};
+      |                                            ^~~~~~~~~~~
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:47:57: error: no matching function for call to 'units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >::unit_t(<brace-enclosed initializer list>)'
+   47 |           units::radian_t{m_turningEncoder.GetDistance()}};
+      |                                                         ^
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1991:34: note: candidate: 'template<class UnitsRhs, class Ty, template<class> class NlsRhs> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(const units::unit_t<UnitsRhs, Ty, NlsRhs>&) [with Ty = UnitsRhs; NlsRhs = Ty; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1991 |                 inline constexpr unit_t(const unit_t<UnitsRhs, Ty, NlsRhs>& rhs) noexcept :
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1991:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1979:34: note: candidate: 'template<class Rep, class Period, class> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(const std::chrono::duration<_Rep, _Period>&) [with Period = Rep; <template-parameter-2-3> = Period; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1979 |                 inline constexpr unit_t(const std::chrono::duration<Rep, Period>& value) noexcept :
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1979:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1968:34: note: candidate: 'template<class Ty, class> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(Ty) [with <template-parameter-2-2> = Ty; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1968 |                 inline constexpr unit_t(const Ty value) noexcept : nls(value)
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1968:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1957:43: note: candidate: 'template<class ... Args> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(T, const Args& ...) [with Args = {Args ...}; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1957 |                 inline explicit constexpr unit_t(const T value, const Args&... args) noexcept : nls(value, args...)
+      |                                           ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1957:43: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1946:27: note: candidate: 'constexpr units::unit_t<Units, T, NonLinearScale>::unit_t() [with Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1946 |                 constexpr unit_t() = default;
+      |                           ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1946:27: note:   candidate expects 0 arguments, 1 provided
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note: candidate: 'constexpr units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >::unit_t(const units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >&)'
+ 1925 |         class unit_t : public NonLinearScale<T>, units::detail::_unit_t
+      |               ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note:   conversion of argument 1 would be ill-formed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note: candidate: 'constexpr units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >::unit_t(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >&&)'
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note:   conversion of argument 1 would be ill-formed:
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:47:58: error: could not convert '{units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1> > > >(((SwerveModule*)this)->SwerveModule::m_driveMotor.ctre::phoenix::motorcontrol::can::WPI_TalonFX::<anonymous>.ctre::phoenix::motorcontrol::can::BaseMotorController::GetSelectedSensorPosition(0)), <expression error>}' from '<brace-enclosed initializer list>' to 'frc::SwerveModulePosition'
+   47 |           units::radian_t{m_turningEncoder.GetDistance()}};
+      |                                                          ^
+      |                                                          |
+      |                                                          <brace-enclosed initializer list>
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp: In member function 'void SwerveModule::SetDesiredState(const frc::SwerveModuleState&)':
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:54:56: error: 'class ctre::phoenix::sensors::CANCoder' has no member named 'GetDistance'
+   54 |       referenceState, units::radian_t{m_turningEncoder.GetDistance()});
+      |                                                        ^~~~~~~~~~~
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:54:69: error: no matching function for call to 'units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >::unit_t(<brace-enclosed initializer list>)'
+   54 |       referenceState, units::radian_t{m_turningEncoder.GetDistance()});
+      |                                                                     ^
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1991:34: note: candidate: 'template<class UnitsRhs, class Ty, template<class> class NlsRhs> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(const units::unit_t<UnitsRhs, Ty, NlsRhs>&) [with Ty = UnitsRhs; NlsRhs = Ty; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1991 |                 inline constexpr unit_t(const unit_t<UnitsRhs, Ty, NlsRhs>& rhs) noexcept :
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1991:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1979:34: note: candidate: 'template<class Rep, class Period, class> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(const std::chrono::duration<_Rep, _Period>&) [with Period = Rep; <template-parameter-2-3> = Period; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1979 |                 inline constexpr unit_t(const std::chrono::duration<Rep, Period>& value) noexcept :
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1979:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1968:34: note: candidate: 'template<class Ty, class> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(Ty) [with <template-parameter-2-2> = Ty; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1968 |                 inline constexpr unit_t(const Ty value) noexcept : nls(value)
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1968:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1957:43: note: candidate: 'template<class ... Args> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(T, const Args& ...) [with Args = {Args ...}; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1957 |                 inline explicit constexpr unit_t(const T value, const Args&... args) noexcept : nls(value, args...)
+      |                                           ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1957:43: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1946:27: note: candidate: 'constexpr units::unit_t<Units, T, NonLinearScale>::unit_t() [with Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1946 |                 constexpr unit_t() = default;
+      |                           ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1946:27: note:   candidate expects 0 arguments, 1 provided
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note: candidate: 'constexpr units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >::unit_t(const units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >&)'
+ 1925 |         class unit_t : public NonLinearScale<T>, units::detail::_unit_t
+      |               ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note:   conversion of argument 1 would be ill-formed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note: candidate: 'constexpr units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >::unit_t(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >&&)'
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note:   conversion of argument 1 would be ill-formed:
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:58:20: error: 'class ctre::phoenix::motorcontrol::can::WPI_TalonFX' has no member named 'GetRate'
+   58 |       m_driveMotor.GetRate(), state.speed.value());
+      |                    ^~~~~~~
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:62:40: error: 'class ctre::phoenix::sensors::CANCoder' has no member named 'GetDistance'
+   62 |       units::radian_t{m_turningEncoder.GetDistance()}, state.angle.Radians());
+      |                                        ^~~~~~~~~~~
+C:\Users\ahunt\CORE2062 Projects\TestSwerveProject\src\main\cpp\subsystems\SwerveModule.cpp:62:53: error: no matching function for call to 'units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >::unit_t(<brace-enclosed initializer list>)'
+   62 |       units::radian_t{m_turningEncoder.GetDistance()}, state.angle.Radians());
+      |                                                     ^
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1991:34: note: candidate: 'template<class UnitsRhs, class Ty, template<class> class NlsRhs> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(const units::unit_t<UnitsRhs, Ty, NlsRhs>&) [with Ty = UnitsRhs; NlsRhs = Ty; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1991 |                 inline constexpr unit_t(const unit_t<UnitsRhs, Ty, NlsRhs>& rhs) noexcept :
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1991:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1979:34: note: candidate: 'template<class Rep, class Period, class> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(const std::chrono::duration<_Rep, _Period>&) [with Period = Rep; <template-parameter-2-3> = Period; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1979 |                 inline constexpr unit_t(const std::chrono::duration<Rep, Period>& value) noexcept :
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1979:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1968:34: note: candidate: 'template<class Ty, class> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(Ty) [with <template-parameter-2-2> = Ty; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1968 |                 inline constexpr unit_t(const Ty value) noexcept : nls(value)
+      |                                  ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1968:34: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1957:43: note: candidate: 'template<class ... Args> constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(T, const Args& ...) [with Args = {Args ...}; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1957 |                 inline explicit constexpr unit_t(const T value, const Args&... args) noexcept : nls(value, args...)
+      |                                           ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1957:43: note:   template argument deduction/substitution failed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1946:27: note: candidate: 'constexpr units::unit_t<Units, T, NonLinearScale>::unit_t() [with Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > >; T = double; NonLinearScale = units::linear_scale]'
+ 1946 |                 constexpr unit_t() = default;
+      |                           ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1946:27: note:   candidate expects 0 arguments, 1 provided
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note: candidate: 'constexpr units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >::unit_t(const units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >&)'
+ 1925 |         class unit_t : public NonLinearScale<T>, units::detail::_unit_t
+      |               ^~~~~~
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note:   conversion of argument 1 would be ill-formed:
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note: candidate: 'constexpr units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >::unit_t(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<1> > > >&&)'
+C:\Users\ahunt\.gradle\caches\transforms-3\6327b5a36f55b53e9e294088b123c9e5\transformed\wpiapi-cpp-23.0.1-headers/units/base.h:1925:15: note:   conversion of argument 1 would be ill-formed:
+
+compiling Constants.cpp successful.
+
+compiling Robot.cpp successful.
+
+compiling DriveSubsystem.cpp successful.
+
+compiling RobotContainer.cpp successful.
+
+Finished compileFrcUserProgramDebugExecutableFrcUserProgramCpp, see full log file:///C:/Users/ahunt/CORE2062%20Projects/TestSwerveProject/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt.
